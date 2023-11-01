@@ -1,0 +1,14 @@
+git --version
+git init
+git status
+create files
+cat files
+git config --global user.name " ---"
+git config --global user.email ""
+git confit --global --list
+git commit -m "version"
+oneline
+branch -m
+git remote add origin 
+git remote show origin
+git push -u origin 
