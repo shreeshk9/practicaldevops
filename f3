@@ -30,3 +30,30 @@ bat 'copy C:\\Users\\app\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\ maven_p
 
 }
 }
+
+
+or 
+
+pipeline {
+    agent any
+    tools {
+        maven 'Maven'
+    }
+    stages {
+        stage("Git Clone") {
+            steps {
+                git 'https://github.com/prajwal0211/pipeline.git'
+            }
+        }
+        stage("Build") {
+            steps {
+                bat 'mvn clean install'
+            }
+        }
+        stage("Deploy") {
+            steps {
+                bat 'copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\tomcatpipeline\\webapp\\target\\webapp.war E:\\apache-tomcat-9.0.80\\webapps'
+            }
+        }
+    }
+}
