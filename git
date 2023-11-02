@@ -6,12 +6,25 @@ cat files
 git config --global user.name " ---"
 git config --global user.email ""
 git confit --global --list
+git add filename
+git status
 git commit -m "version"
-oneline
-branch -m
-git remote add origin 
+git log --oneline
+git branch -M main(branchname)
+git remote add origin link to repo
 git remote show origin
-git push -u origin 
-git pull 
-git fetch
+git push -u origin main
+git pull (link to repo)
+git fetch (link to repo)
+
+
+branching
+
+git branch
+git branch branchname
+git checkout branchname
+git merge brachname
+git log --oneline --graph
+git merge --no-ff branchname
+
 
